@@ -457,13 +457,14 @@ class TSP_Analysis(Monte_Carlo):
         self.history.append(m)
         return m['coef']['b']
 
-# tsp = TSP_Analysis()
+tsp = TSP_Analysis()
 # out = tsp.sensitivity()
 # df_p = pd.DataFrame(out['plus'])
 # df_m = pd.DataFrame(out['minus'])
 # df_n = pd.DataFrame(out['normal'])
-# results = tsp.simulation(10000)
-# tsp.plot_cdf()
+results = tsp.simulation(100)
+print(results)
+tsp.plot_cdf()
 # hist = tsp.history
 # bp = tsp.box_plot_Complexity()
 # df = load_results()
